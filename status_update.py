@@ -23,9 +23,9 @@ def make_time(c):  # возвращает строку с текущим вре�
 def make_log(c):  # логирование
     global except_counter
     if c == 1:   return 'Start the program: ' + make_time(1)
-    elif c == 2: return 'Stop the progam: ' + make_time(1)
-    elif c == 3: return 'Status updated: ' + make_time(1)
-    elif c == 4: return 'Exception[' + str(except_counter) + ']: ' + make_time(1)
+    if c == 2: return 'Stop the progam: ' + make_time(1)
+    if c == 3: return 'Status updated: ' + make_time(1)
+    if c == 4: return 'Exception[' + str(except_counter) + ']: ' + make_time(1)
 def magic():
     global except_counter
     try:

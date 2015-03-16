@@ -2,6 +2,7 @@ from vk import API
 from time import strftime, sleep
 import webbrowser
 
+# открытие вк с запросом для получения прав
 webbrowser.open('https://oauth.vk.com/authorize?client_id=4727669&scope=status&'
                 'redirect_uri=https://oauth.vk.com/blank.html&display=page&v=5.27&response_type=token')
 access_token = input('Введите токен: ')

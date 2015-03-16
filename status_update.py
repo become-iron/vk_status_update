@@ -1,8 +1,10 @@
-# https://oauth.vk.com/authorize?client_id=4727669&scope=status&redirect_uri=https://oauth.vk.com/blank.html&display=page&v=5.27&response_type=token
 from vk import API
 from time import strftime, sleep
+import webbrowser
 
-access_token = '6361c9ff6315bb9d50077c70c33563927d68bc9cb5e6f922217d87f82321ce05d67c8ccdsfserb027075ab'
+webbrowser.open('https://oauth.vk.com/authorize?client_id=4727669&scope=status&'
+                'redirect_uri=https://oauth.vk.com/blank.html&display=page&v=5.27&response_type=token')
+access_token = input('Введите токен: ')
 
 # кол-во срабатывания исключений,
 # после кот-го зав-ся работа скрипта
@@ -32,7 +34,7 @@ def magic():
                 print(make_log(2))  # 'Stop the program'
                 break
             vkapi.status.set(text=make_time(2))  # обновление статуса
-            print(make_log(3))  #'Status updated'
+            print(make_log(3))  # 'Status updated'
             # сон на секунду, иначе произойдёт смена статуса несколько
             # раз (скрипт успевает выполняться несколько раз за секунду)
             sleep(1)

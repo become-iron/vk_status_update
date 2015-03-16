@@ -1,3 +1,4 @@
+# coding=utf-8
 from vk import API
 from time import strftime, sleep
 import webbrowser
